@@ -42,9 +42,19 @@ export default class App extends Component {
 
         {/* header */}
         <Content style={style.contentPadding}>
-          
+          <H1 style={style.title}>Categories</H1>
 
-          <H1 style={style.title}>Music</H1>
+          <ScrollView horizontal={true}>
+            {category.map(item=>
+
+            <Button style={{ backgroundColor: '#ffb6b9' }} primary>
+              <Text >{item.name}</Text>
+            </Button>
+            )}
+           
+          </ScrollView>
+
+          <H1 style={style.title}>Today</H1>
 
 
 

@@ -1,0 +1,92 @@
+<Container style={style.container}>
+
+        {/* header */}
+        <Nav />
+
+        {/* header */}
+        <Content style={style.contentPadding}>
+          <H1 style={style.title}>Categories</H1>
+
+          <ScrollView horizontal={true}>
+            {category.map(item=>
+
+            <Button style={{ backgroundColor: '#ffb6b9' }} primary>
+              <Text >{item.name}</Text>
+            </Button>
+            )}
+           
+          </ScrollView>
+
+          <H1 style={style.title}>Today</H1>
+
+
+          {event.map(item=>
+          <Card>
+            <View style={style.rowItem}>
+              <View style={{ padding: 9 }}>
+                <Avatar
+                  size='medium'
+                  rounded
+                  source=
+                  {{
+                    uri:
+                      'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+                  }}
+                />
+              </View>
+              <View>
+                <Text style={style.avatar}>Jenifer Lee</Text>
+                <Text style={style.avatarP}>Bintaero, Jakrta </Text>
+              </View>
+            </View>
+
+
+            <Body>
+
+              <Image
+                source={{ uri: item.image }}
+                style={style.image}
+              />
+            </Body>
+            <CardItem footer>
+              <View style={style.rowItem}>
+                <View style={style.flexItem}>
+                  <H1 style={{ fontWeight: 'bold' }}>{item.title}</H1>
+                </View>
+                <View>
+                  <Text>
+                    <Icon name='heart' />
+                  </Text>
+                </View>
+              </View>
+            </CardItem>
+            <CardItem>
+              <Text style={{ color: '#272343' }}>21 Desember 2020</Text>
+            </CardItem>
+            <CardItem>
+              <Text style={{ color: '#999' }}>
+                Raisa bersama JUNI Concert akan menggelar konser tunggal di Stadion
+                Utama Gelora Bung Karno pada 27 Juni 2020 yang bertajuk Raisa Live
+                in Concert Stadion Utama Gelora Bung Karno. Konser ini akan menja
+                di saksi nyata tentang cerita perjalanan, perjuangan, dan harapann
+                ya di industri musik, serta memberikan pesan kuat bahwa setiap or
+                ang, terutama generasi muda khususnya perempuan, bisa bermimpi da
+                n menggapai impiannya dan bahkan menciptakan sejarah
+                  </Text>
+            </CardItem>
+          </Card>
+          )}
+          
+
+        </Content>
+        <Footer>
+          <FooterTab style={style.home}>
+
+            <Button>
+              <Icon name="home" />
+            </Button>
+
+
+          </FooterTab>
+        </Footer>
+      </Container>
